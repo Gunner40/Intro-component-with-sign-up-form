@@ -21,6 +21,169 @@
 /**** basic styles ****/
 
 body {
+  margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  color: #fff;
+  background-color: var(--color-primary-Red);
+  background-image: url("./images/bg-intro-mobile.png");
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+/**** main container styles ****/
+
+.container {
+  margin: 1.5em;
+  max-width: 500px;
+}
+
+/**** hero section styles ****/
+
+.hero {
+  text-align: center;
+}
+
+.hero__heading {
+  font-size: 1.7rem;
+}
+
+.hero__text {
+  margin-bottom: 4em;
+  max-width: 50ch;
+}
+
+/**** promo banner styles ****/
+
+.banner {
+  background-color: var(--color-accent-Blue);
+  padding: 1em 4em;
+  border-radius: 0.5em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+}
+
+.banner span {
+  font-weight: 700;
+}
+
+/**** form styles ****/
+
+/* border radius on required elements */
+.form-section__form,
+.form-section__form input,
+.form-section__form button {
+  border-radius: 0.5em;
+}
+
+/* box-shadow on required elements */
+.form-section__form,
+.banner {
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-section__form {
+  background-color: #fff;
+  padding: 1.5em;
+}
+
+.form-section__form input {
+  width: 100%;
+  padding: 2em 1.5em;
+  border-style: solid;
+  border-color: #d8d8d8;
+  border-width: 0.5px;
+}
+
+.form-section__form input:not(:first-child),
+.form-section__form button {
+  margin-top: 2em;
+}
+
+.form-section__form input:focus {
+  outline: none;
+  border: 3px solid var(--color-accent-Blue);
+}
+
+.form-section__form input::placeholder {
+  font-weight: 600;
+}
+
+.form-section__submit-button {
+  text-transform: uppercase;
+  background-color: var(--color-primaryGreen);
+  color: inherit;
+  font-family: inherit;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-section__submit-button:hover {
+  opacity: 0.8;
+}
+
+.form__terms {
+  color: var(--color-neutral-Grayish-Blue);
+  font-size: 11px;
+  text-align: center;
+  padding-inline: 1.5em;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.form__terms a {
+  text-decoration: none;
+  color: var(--color-primary-Red);
+  font-weight: 500;
+}
+
+/* error message, this will have only appear when validation fails and will be added from the js file */
+
+.error {
+  color: var(--color-primary-Red);
+  font-size: 10px;
+  text-align: right;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+/**** responsive styles for larger screens ****/
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .hero,
+  .form-section {
+    flex-basis: 45%;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  .hero__heading {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  .hero__text {
+    line-height: 1.7;
+  }
+}
+
+/**** Utility classes ****/
+
+.d-none {
+  display: none;
 }

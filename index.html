@@ -27,8 +27,8 @@
         </p>
       </section>
       <div class="form-section">
-        <p class="form-section__banner">
-          <span>Try it free 7 days</span>then $20/mo. thereafter
+        <p class="banner">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
         </p>
         <form class="form-section__form" novalidate>
           <input
@@ -37,33 +37,50 @@
             name="fname"
             required
             placeholder="First Name"
+            autocomplete="off"
           />
+          <p class="error d-none">
+            <em>First Name cannot be empty</em>
+          </p>
           <input
             type="text"
             id="lname"
             name="lname"
             required
             placeholder="Last Name"
+            autocomplete="off"
           />
+          <p class="error d-none">
+            <em>Last Name cannot be empty</em>
+          </p>
           <input
             type="email"
             id="email"
             name="email"
             required
             placeholder="Email Address"
+            autocomplete="off"
           />
+          <p class="error d-none">
+            <em>Looks like this is not an email</em>
+          </p>
           <input
             type="password"
             id="pword"
             name="pword"
             required
             placeholder="Password"
+            autocomplete="new-password"
           />
-          <button>Claim your free trial</button>
-          <p class="form__t&c">
-            By clicking the button, you are agreeing to our<span
-              >Terms and Services</span
-            >
+          <p class="error d-none">
+            <em>Password cannot be empty</em>
+          </p>
+          <button class="form-section__submit-button">
+            Claim your free trial
+          </button>
+          <p class="form__terms">
+            By clicking the button, you are agreeing to our
+            <a href="#">Terms and Services</a>
           </p>
         </form>
       </div>
