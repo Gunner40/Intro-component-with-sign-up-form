@@ -28,7 +28,6 @@ body {
   background-color: var(--color-primary-Red);
   background-image: url("./images/bg-intro-mobile.png");
   min-height: 100vh;
-  min-height: 100svh;
   display: grid;
   place-items: center;
 }
