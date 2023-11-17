@@ -10,12 +10,6 @@ submitButton.addEventListener("click", (e) => {
       displayError(input);
     }
 
-    // clear all error messages when user types something in an input field
-    input.addEventListener("keydown", () => {
-      input.nextElementSibling.classList.add("d-none");
-      input.style.backgroundImage = "none";
-    });
-
     // check email is valid
     if (input.type == "email") {
       const userEntry = input.value;
@@ -30,13 +24,31 @@ submitButton.addEventListener("click", (e) => {
         displayError(input);
       }
     }
+
+    // clear all error messages when user types something in an input field
+    input.addEventListener("keydown", () => {
+      input.nextElementSibling.classList.add("d-none");
+      input.style.backgroundImage = "none";
+    });
   });
   e.preventDefault();
+});
+
+// clear all error messages when user types something in an input field
+
+allFormInputs.forEach((input) => {
+  input.addEventListener("keydown", () => {
+    input.nextElementSibling.classList.add("d-none");
+    input.style.backgroundImage = "none";
+    input.style.borderColor = "green";
+    input.style.borderWidth = "3px";
+  });
 });
 
 // display error function
 function displayError(input) {
   input.style.borderColor = "red";
+  input.style.borderWidth = "3px";
   input.nextElementSibling.classList.remove("d-none");
   input.style.backgroundImage = "url(./images/icon-error.svg)";
   input.style.backgroundRepeat = "no-repeat";
