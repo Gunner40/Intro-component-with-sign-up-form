@@ -24,18 +24,11 @@ submitButton.addEventListener("click", (e) => {
         displayError(input);
       }
     }
-
-    // clear all error messages when user types something in an input field
-    input.addEventListener("keydown", () => {
-      input.nextElementSibling.classList.add("d-none");
-      input.style.backgroundImage = "none";
-    });
   });
   e.preventDefault();
 });
 
-// clear all error messages when user types something in an input field
-
+// clear error message when user types something in an input field
 allFormInputs.forEach((input) => {
   input.addEventListener("keydown", () => {
     input.nextElementSibling.classList.add("d-none");

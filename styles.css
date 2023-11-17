@@ -92,7 +92,7 @@ body {
 
 .form-section__form input {
   width: 100%;
-  padding: 2em 1.5em;
+  padding: 1.5em 2em;
   border-style: solid;
   border-color: #d8d8d8;
   border-width: 0.5px;
@@ -100,7 +100,7 @@ body {
 
 .form-section__form input:not(:first-child),
 .form-section__form button {
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 .form-section__form input:focus {
